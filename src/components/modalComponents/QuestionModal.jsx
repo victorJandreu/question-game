@@ -1,18 +1,21 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
+import { ThemeContext } from "../../App";
 
 
 export default function QuestionModal({
-  life,
-  setNumero,
-  setModal,
-  setDisplayModal,
-  questionData,
-  numero,
-  setQuestionData,
-  setLife,
 
 
 }) {
+ 
+  const {  life,
+    setNumero,
+    setModal,
+    setDisplayModal,
+    questionData,
+    numero,
+    setQuestionData,
+    setLife} = useContext(ThemeContext)
+
     //setLose
   const [check, setCheck] = useState(false);
   const [alreadyAnswer, setAlreadyAnswer] = useState(false);

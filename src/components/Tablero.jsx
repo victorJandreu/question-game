@@ -3,16 +3,10 @@ import ArrowMovement from "./ArrowMovement";
 import person from "../assets/person.svg";
 
 export default function Tablero({
-  modal,
-  setModal,
-  setLife,
   contenido,
   maxFilas,
   maxColumnas,
   tablero,
-  setTablero,
-  setDisplayModal,
-  setFloor,
 }) {
  
 
@@ -54,7 +48,7 @@ export default function Tablero({
       <div style={styl} className="tablero">
         {showTablero}
       </div>
-      <ArrowMovement modal={modal} setModal={setModal} setLife={setLife} contenido={contenido} maxFilas={maxFilas} maxColumnas={maxColumnas} tablero={tablero} setTablero={setTablero} setDisplayModal={setDisplayModal} setFloor={setFloor} />
+      <ArrowMovement  />
     </>
   );
 }

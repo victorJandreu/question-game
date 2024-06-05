@@ -1,6 +1,10 @@
 import heartImg from "../../assets/heart.svg"
+import { ThemeContext } from "../../App";
+import React, {  useContext } from "react";
 
-export default function HeartModal({setModal, setDisplayModal}) {
+export default function HeartModal() {
+
+  const {setModal, setDisplayModal} = useContext(ThemeContext)
 
     function returnQuestionModal(){
         setModal(false)

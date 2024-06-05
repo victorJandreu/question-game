@@ -1,16 +1,20 @@
 import startNewGame from "../../functions/startNewGame";
+import { ThemeContext } from "../../App";
+import React, {  useContext } from "react";
 
-export default function FloorModal({
-  setModal,
-  setDisplayModal,
-  setMaxFilas,
-  setMaxColumnas,
-  floor,
-  setLife,
-  setNumero,
-  setError,
-  setStart,
-}) {
+export default function FloorModal() {
+
+  const { setModal,
+    setDisplayModal,
+    setMaxFilas,
+    setMaxColumnas,
+    floor,
+    setLife,
+    setNumero,
+    setError,
+    setStart} = useContext(ThemeContext)
+
+
   function newFloor() {
     setModal(false);
     setDisplayModal(0);

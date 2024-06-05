@@ -1,10 +1,10 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, createContext } from "react";
 import "./styles/app.scss";
-import Modals from "./components/Modals"
-import Tablero from "./components/Tablero"
+import Modals from "./components/Modals";
+import Tablero from "./components/Tablero";
 import React from "react";
 import apiCall from "./functions/apiCall";
-import Heart from "./components/Hearts"
+import Heart from "./components/Hearts";
 import initTablero from "./functions/initTablero";
 
 const contenido = {
@@ -15,7 +15,7 @@ const contenido = {
   character: "⭐",
   visitado: "v",
 };
-
+const ThemeContext = createContext(null);
 function App() {
   //relate with the modal
   const [modal, setModal] = useState(false);
@@ -63,45 +63,45 @@ function App() {
   }, [start]);
 
   return (
-    <>
+    <ThemeContext.Provider
+      value={{
+        modal,
+        contenido,
+        setModal,
+        setLife,
+        maxFilas,
+        maxColumnas,
+        tablero,
+        setTablero,
+        setDisplayModal,
+        setFloor,
+        life,
+        setNumero,
+        questionData,
+        setQuestionData,
+        numero,
+        setError,
+        setStart,
+        setMaxFilas,
+        setMaxColumnas,
+        floor,
+
+      }}
+    >
       <Heart life={life} floor={floor} />
       <Tablero
-        modal={modal}
-        setModal={setModal}
-        setLife={setLife}
-        setDisplayModal={setDisplayModal}
-        setFloor={setFloor}
         contenido={contenido}
         maxFilas={maxFilas}
         maxColumnas={maxColumnas}
         tablero={tablero}
-        setTablero={setTablero}
       />
       {modal && (
-        <Modals
-          setModal={setModal}
-          questionData={questionData}
-          setQuestionData={setQuestionData}
-          numero={numero}
-          setNumero={setNumero}
-          setLife={setLife}
-          life={life}
-          setStart={setStart}
-          setError={setError}
-          displayModal={displayModal}
-          setDisplayModal={setDisplayModal}
-          setTablero={setTablero}
-          contenido={contenido}
-          maxFilas={maxFilas}
-          setMaxFilas={setMaxFilas}
-          maxColumnas={maxColumnas}
-          setMaxColumnas={setMaxColumnas}
-          floor={floor}
-        />
+        <Modals displayModal={displayModal}/>
       )}
       {error ? <p>Lo sentimos refresque la pagina</p> : null}
-    </>
+    </ThemeContext.Provider>
   );
 }
 
+export { ThemeContext };
 export default App;
