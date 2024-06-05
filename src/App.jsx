@@ -1,11 +1,11 @@
-import { useEffect, useState, useRef } from "react";
+import { useEffect, useState } from "react";
 import "./styles/app.scss";
-import Modals from "./Modals";
-import Tablero from "./Tablero";
+import Modals from "./components/Modals"
+import Tablero from "./components/Tablero"
 import React from "react";
-import apiCall from "./apiCall";
-import Heart from "./Hearts";
-import initTablero from "./initTablero";
+import apiCall from "./functions/apiCall";
+import Heart from "./components/Hearts"
+import initTablero from "./functions/initTablero";
 
 const contenido = {
   vacio: "⬜",
@@ -65,43 +65,40 @@ function App() {
   return (
     <>
       <Heart life={life} floor={floor} />
-        <Tablero
-          modal={modal}
+      <Tablero
+        modal={modal}
+        setModal={setModal}
+        setLife={setLife}
+        setDisplayModal={setDisplayModal}
+        setFloor={setFloor}
+        contenido={contenido}
+        maxFilas={maxFilas}
+        maxColumnas={maxColumnas}
+        tablero={tablero}
+        setTablero={setTablero}
+      />
+      {modal && (
+        <Modals
           setModal={setModal}
+          questionData={questionData}
+          setQuestionData={setQuestionData}
+          numero={numero}
+          setNumero={setNumero}
           setLife={setLife}
+          life={life}
+          setStart={setStart}
+          setError={setError}
+          displayModal={displayModal}
           setDisplayModal={setDisplayModal}
-          setFloor={setFloor}
+          setTablero={setTablero}
           contenido={contenido}
           maxFilas={maxFilas}
           setMaxFilas={setMaxFilas}
           maxColumnas={maxColumnas}
           setMaxColumnas={setMaxColumnas}
-          tablero={tablero}
-          setTablero={setTablero}
+          floor={floor}
         />
-        {modal && (
-          <Modals
-            setModal={setModal}
-            modal={modal}
-            questionData={questionData}
-            setQuestionData={setQuestionData}
-            numero={numero}
-            setNumero={setNumero}
-            setLife={setLife}
-            life={life}
-            setStart={setStart}
-            setError={setError}
-            displayModal={displayModal}
-            setDisplayModal={setDisplayModal}
-            setTablero={setTablero}
-            contenido={contenido}
-            maxFilas={maxFilas}
-            setMaxFilas={setMaxFilas}
-            maxColumnas={maxColumnas}
-            setMaxColumnas={setMaxColumnas}
-            floor={floor}
-          />
-        )}
+      )}
       {error ? <p>Lo sentimos refresque la pagina</p> : null}
     </>
   );

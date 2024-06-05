@@ -1,4 +1,4 @@
-import heartImg from "./assets/heart.svg"
+import heartImg from "../../assets/heart.svg"
 
 export default function HeartModal({setModal, setDisplayModal}) {
 

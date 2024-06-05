@@ -1,4 +1,4 @@
-import startNewGame from "./startNewGame";
+import startNewGame from "../../functions/startNewGame";
 
 export default function FloorModal({
   setModal,
@@ -17,17 +17,22 @@ export default function FloorModal({
     setMaxFilas((prev) => prev + 2);
     setMaxColumnas((prev) => prev + 2);
   }
+
+  // depends on the floor, select next floor modal or winner modal
   return (
     <>
       {floor !== 0 ? (
         <div className="modal-content nextFloor-modal">
           <p>Has encontrado la escalera</p>
-          <button className="nextButton" onClick={newFloor}>Bajar a la siguiente planta</button>
+          <button className="nextButton" onClick={newFloor}>
+            Bajar a la siguiente planta
+          </button>
         </div>
       ) : (
         <div className="modal-content winner-modal">
           <p>Has salido</p>
-          <button className="nextButton"
+          <button
+            className="nextButton"
             onClick={() =>
               startNewGame(
                 setModal,
