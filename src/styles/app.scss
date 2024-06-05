@@ -1,0 +1,54 @@
+@use "modal";
+@use "board";
+@use "arrow";
+@use "heart-nav";
+
+body {
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+    min-height: 100vh;
+  }
+  
+  *{
+    box-sizing: border-box;
+  }
+  
+  #root {
+    width: 100vw;
+   background-image: url("../assets/exterior.jpg");
+   background-size: cover;
+   background-repeat: no-repeat;
+   min-height: 100vh;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+  }
+  
+  p{
+   color: rgb(25, 21, 21);}
+  
+  
+  .nextButton{
+    padding: .6rem 1rem;
+    border: 1px solid rgb(25, 21, 21);
+    background: linear-gradient(rgb(255, 195, 31), rgb(238, 223, 56) );
+    cursor: pointer;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: opacity .3s ease-in-out;
+  }
+  
+  .nextButton:hover{
+    opacity: .7;
+  }
+  
+
+  
+ 
+  
+ 
+  
+  

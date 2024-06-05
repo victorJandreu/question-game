@@ -1,0 +1,54 @@
+.arrowMenu{
+    
+    margin-top: 1.5vh;
+    height: 20vh;
+    display: grid;
+    width: 200px;
+    max-height: 200px;
+    margin-inline: auto;
+  
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+  
+  }
+  
+  .arrowMenu button{
+    padding: 1vh;
+    border: 1px solid rgb(25, 21, 21);
+    background: linear-gradient(rgb(255, 195, 31), rgb(238, 223, 56) );
+    cursor: pointer;
+    transition: opacity .3s ease-in-out;
+    border-radius: 4px;
+  }
+  
+  .arrowMenu button:hover {
+    opacity: .7;
+  }
+  
+  .icon{
+    font-size: 20px;
+    color: rgb(25, 21, 21);
+  }
+  .arrowMenu .up{
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+  }
+  
+  .arrowMenu .left{
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+  
+  }
+  
+  .arrowMenu .right{
+    grid-column: 3 / 4;
+    grid-row: 2 / 3;
+    
+  }
+  
+  .arrowMenu .down{
+    grid-column: 2 / 3;
+    grid-row: 3 / 4;
+    
+  }
+  

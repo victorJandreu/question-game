@@ -1,0 +1,58 @@
+.tablero {
+    width: 90%;
+    margin: 0 auto;
+    border: none;
+    max-width: 1000px;
+    background-color: rgb(25, 21, 21);
+    border-image-source: linear-gradient(rgba(255, 195, 31, 0.574), rgba(238, 223, 56, 0.486) );
+  
+    border-image-slice:
+  115 100 113 50;
+  border-image-width:
+  4px;
+  border-image-outset:
+  0px 0px 0px 0px;
+  border-image-repeat:
+  stretch stretch;
+  
+  padding: 4px;
+  overflow: hidden;
+  box-sizing: content-box;
+  }
+  
+  .show {
+    background-image: url("../assets/wood-dark2.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    min-width: 100%;
+    height: 100%;
+    padding: 0;
+    border: none;
+    background-position: center;
+  }
+  
+  .casilla {
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width:100%;
+  }
+  
+  .prueba {
+    width: 100%;
+    height: 100%;
+    background-image: url("../assets/wood-light2.png");
+    background-size:cover;
+    border: none;
+    background-repeat: no-repeat;
+    background-position: center;
+    object-fit: cover;
+  
+  }
+  
+  .person {
+  width: 100%;
+  height: 100%;
+  padding: 5% 3px;
+  }

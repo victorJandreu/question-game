@@ -1,5 +1,5 @@
 import { useEffect, useState, useRef } from "react";
-import "./index.css";
+import "./styles/app.scss";
 import Modals from "./Modals";
 import Tablero from "./Tablero";
 import React from "react";

@@ -1,0 +1,138 @@
+
+/* MODAL */
+  
+.overlay {
+    position: absolute;
+    width: 100vw;
+    height: calc( 100% - calc(5vh + 10px));
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(49, 49, 49, 0.8);
+  }
+  
+  .modal-content {
+    position: absolute;
+    top: 50%;  
+    left: 50%; 
+    transform: translate(-50%, -50%);
+    padding: 1.5rem;
+    z-index: 3;
+    background-color: rgb(245, 248, 224);
+    border-radius: 10px;
+    max-width: 600px;
+    box-shadow: 5px 5px 20px 5px rgb(99, 87, 54);
+  }
+  
+  .heart-modal, .nextFloor-modal, .winner-modal, .lose-modal{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+
+  
+  /* heart modal */
+  
+  .heart-modal img{
+    width: 20%;
+  }
+  
+
+  /* next floor modal, next floor and lose */
+  
+  .nextFloor-modal, .winner-modal, .lose-modal{
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 90%;
+    height: 60%;
+    object-fit: cover;
+  }
+  
+  .nextFloor-modal p, .winner-modal p, .lose-modal p{
+    background-color: rgb(255, 254, 222);
+    padding: 10px;
+    border-radius: 4px;
+    padding: 1px 10px;
+  }
+  
+  .nextFloor-modal{
+    background-image: url("../assets/escalera.jpg");
+    background-position: bottom;
+  }
+  
+  
+  .lose-modal{
+    background-image: url("../assets/lose.jpg");
+    background-position: bottom;
+  }
+  
+  
+  .winner-modal{
+    background-image: url("../assets/win.jpg");
+  }
+  
+  /* question Modal */
+  .questionModal{
+    width: 90%;
+  }
+  
+  
+  .modal-content h2{
+    font-size: 1.5rem;
+    margin: 0 0 1rem 0;
+  }
+  
+  .btn-group button{
+    display: block;
+    background: none;
+    width: 100%;
+    text-align: left;
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all .3s ease;
+  }
+  
+  .btn-group button:hover{
+    background-color: rgb(238, 223, 56);
+  }
+  
+  .btn-group{
+   display: flex;
+   flex-direction: column;
+   gap: 20px;
+  }
+  
+  .notHover:hover{
+    background: none !important;
+  }
+  
+  .close{
+    position: absolute;
+    top: .3rem;
+    right: .3rem;
+    background: none;
+    border: none;
+    font-weight: 900;
+    font-size: 1rem;
+   
+  }
+  
+  .closeDesactive{
+    color: rgba(255, 0, 0, 0.296);
+    pointer-events: none;
+  }
+  
+  .closeActive{
+    color: rgb(240, 15, 15);
+    cursor: pointer;
+    transition: all .3s ease-out;
+  }
+  
+  .closeActive:hover{
+    transform: scale(1.3)
+  }
+  
+  
