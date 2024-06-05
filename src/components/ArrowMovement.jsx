@@ -8,7 +8,8 @@ import {arrowDown, arrowUp, arrowRight, arrowLeft} from "../functions/arrow-move
 import { useEffect} from "react";
 
 
-export default function ArrowMovement({  modal,
+export default function ArrowMovement({  
+  modal,
     setModal,
     setLife,
     contenido,
@@ -17,11 +18,12 @@ export default function ArrowMovement({  modal,
     tablero,
     setTablero,
     setDisplayModal,
-    setFloor,}){
+    setFloor}){
 
        
 //arrow movement with keyboard
   useEffect(() => {
+
     const presion = (e) => {
       if (e.key === "ArrowDown") {
         arrowDown(tablero, contenido, maxFilas, setTablero, setLife, setDisplayModal, setModal, modal, setFloor);
@@ -34,6 +36,7 @@ export default function ArrowMovement({  modal,
       }
     };
 
+
     if (!modal) {
       document.addEventListener("keydown", presion);
     }
@@ -43,7 +46,7 @@ export default function ArrowMovement({  modal,
     };
   }, [tablero, modal]);
 
-  
+
 
     return(
         <div className="arrowMenu">

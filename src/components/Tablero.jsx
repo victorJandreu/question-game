@@ -54,7 +54,7 @@ export default function Tablero({
       <div style={styl} className="tablero">
         {showTablero}
       </div>
-      <ArrowMovement setModal={setModal} setLife={setLife} contenido={contenido} maxFilas={maxFilas} maxColumnas={maxColumnas} tablero={tablero} setTablero={setTablero} setDisplayModal={setDisplayModal} setFloor={setFloor} />
+      <ArrowMovement modal={modal} setModal={setModal} setLife={setLife} contenido={contenido} maxFilas={maxFilas} maxColumnas={maxColumnas} tablero={tablero} setTablero={setTablero} setDisplayModal={setDisplayModal} setFloor={setFloor} />
     </>
   );
 }
