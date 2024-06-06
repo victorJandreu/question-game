@@ -7,7 +7,7 @@ export default function Heart({life, floor}) {
     for(let i = 0; i < life; i++) {
         heartArray.push( <img className="heart" key={i} src={heart} alt="heart" />)
     }
-//
+
   return (
     <div className="heart-container">
      {heartArray}

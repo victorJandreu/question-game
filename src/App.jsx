@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Routes, Navigate} from "react-router-dom";
+import { HashRouter, Route, Routes, Navigate} from "react-router-dom";
 import "./styles/app.scss";
 import React from "react";
 import Game from "./pages/Game";
@@ -10,13 +10,13 @@ function App() {
 
 
   return (
-  <BrowserRouter>
+  <HashRouter>
     <Routes>
-      <Route path="/question-game" element={<Home />} />
-      <Route path="/question-game/game/:dificulty" element={<Game />} />
-      <Route path="*" element={<Navigate to="/question-game" />} />
+      <Route path="/" element={<Home />} />
+      <Route path="/game/:dificulty" element={<Game />} />
+      <Route path="*" element={<Navigate to="/" />} />
     </Routes>
-  </BrowserRouter>
+  </HashRouter>
   );
 }
 
