@@ -120,6 +120,7 @@ export default function QuestionModal({
       <button
         className={`close ${alreadyAnswer ? "closeActive" : "closeDesactive"}`}
         onClick={closeModal}
+        aria-label="close the modal"
       >
         X
       </button>

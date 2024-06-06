@@ -27,6 +27,7 @@ export default function Tablero({
     return (
       <div className="casilla" key={x.posicion} id={x.posicion}>
         {valor}
+        <p>{x.content}</p>
       </div>
     );
   });

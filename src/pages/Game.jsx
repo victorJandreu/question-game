@@ -7,6 +7,8 @@ import Heart from "../components/Hearts";
 import initTablero from "../functions/initTablero";
 import { useParams } from "react-router-dom";
 
+
+
 const contenido = {
   vacio: "⬜",
   heart: "💖",
@@ -42,7 +44,7 @@ function Game() {
   const [tablero, setTablero] = useState(() =>
     initTablero(maxFilas, maxColumnas, contenido, dificulty)
   );
-
+ 
 
   //Create the board when you lose or go to a new floor
   useEffect(() => {
@@ -81,8 +83,7 @@ function Game() {
    displayGame = <p>Lo sentimos refresque la pagina</p>
   } else{
 displayGame = (
-    <div className="game">
-      <ThemeContext.Provider
+  <ThemeContext.Provider
         value={{
           modal,
           contenido,
@@ -106,6 +107,8 @@ displayGame = (
           floor,
         }}
       >
+    <main className="game">
+      
         <Heart life={life} floor={floor} />
         <Tablero
           contenido={contenido}
@@ -116,11 +119,9 @@ displayGame = (
         {modal && (
           <Modals displayModal={displayModal}/>
         )}
-      </ThemeContext.Provider>
-    </div> )
-
-
-
+      
+    </main>
+    </ThemeContext.Provider> )
   }
 
   return (

@@ -91,6 +91,7 @@ export default function ArrowMovement() {
   return (
     <div className="arrowMenu">
       <button
+      aria-label="move to up"
         className="up"
         onClick={() =>
           arrowUp(
@@ -108,6 +109,7 @@ export default function ArrowMovement() {
         <FaArrowUp className="icon" />
       </button>
       <button
+      aria-label="move to down"
         className="down"
         onClick={() =>
           arrowDown(
@@ -126,6 +128,7 @@ export default function ArrowMovement() {
         <FaArrowDown className="icon" />
       </button>
       <button
+            aria-label="move to left"
         className="left"
         onClick={() =>
             arrowLeft(
@@ -143,6 +146,7 @@ export default function ArrowMovement() {
         <FaArrowLeft className="icon" />
       </button>
       <button
+      aria-label="move to right"
         className="right"
         onClick={() =>
           arrowRight(

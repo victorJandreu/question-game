@@ -13,7 +13,7 @@ export default function LoseModal() {
 
   return (
     <div className="modal-content lose-modal">
-      <p>Has perdido</p>
+      <p className="over">Game over</p>
       <button
         className="nextButton"
         onClick={() =>
@@ -27,7 +27,7 @@ export default function LoseModal() {
           )
         }
       >
-        Empezar de nuevo
+        Start a new game
       </button>
     </div>
   );

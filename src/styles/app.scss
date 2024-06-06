@@ -33,9 +33,21 @@ body {
   }
   
   p{
-   color: rgb(25, 21, 21);}
+   color: rgb(25, 21, 21);
+   font-family: "Roboto", sans-serif;
+  }
+
+  button{
+    font-family: "Roboto", sans-serif;
+  }
   
+  h1{
+    color: rgb(238, 252, 219);
+    background: linear-gradient(transparent, #000,  transparent);
+  }
+
   
+
   .nextButton{
     padding: .6rem 1rem;
     border: 1px solid rgb(25, 21, 21);

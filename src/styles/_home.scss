@@ -24,8 +24,11 @@
         text-decoration: none;
         color: rgb(25, 21, 21);
         text-transform: uppercase;
-        letter-spacing: 2px;
         transition: transform .3s ease-in-out;
+        letter-spacing: 2px;
+        font-family: "Creepster", system-ui;
+        letter-spacing: 3px;
+        font-weight: 300;
         &:hover{
             transform: scale(1.1);
         }

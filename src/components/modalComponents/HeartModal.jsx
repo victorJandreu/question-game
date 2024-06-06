@@ -15,8 +15,8 @@ export default function HeartModal() {
   return (
     <div className="modal-content heart-modal">
       <img src={heartImg} alt="" />
-      <p>Has ganado un corazon</p>
-      <button className="nextButton" onClick={returnQuestionModal}>Continuar</button>
+      <p>you´ve found a heart</p>
+      <button className="nextButton" onClick={returnQuestionModal}>Continue</button>
     </div>
   );
 }

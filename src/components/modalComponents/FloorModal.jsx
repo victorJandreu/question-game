@@ -1,6 +1,7 @@
 import startNewGame from "../../functions/startNewGame";
 import { ThemeContext } from "../../pages/Game";
 import React, {  useContext } from "react";
+import { Link } from "react-router-dom";
 
 export default function FloorModal() {
 
@@ -27,14 +28,14 @@ export default function FloorModal() {
     <>
       {floor !== 0 ? (
         <div className="modal-content nextFloor-modal">
-          <p>Has encontrado la escalera</p>
+          <p>you have found the stairs</p>
           <button className="nextButton" onClick={newFloor}>
-            Bajar a la siguiente planta
+          go downstairs
           </button>
         </div>
       ) : (
         <div className="modal-content winner-modal">
-          <p>Has salido</p>
+          <p>you have left the house</p>
           <button
             className="nextButton"
             onClick={() =>
@@ -48,8 +49,9 @@ export default function FloorModal() {
               )
             }
           >
-            Empezar nueva partida
+            Start a new game
           </button>
+          <Link className="return" to={"/"}>Return to the main menu</Link>
         </div>
       )}
     </>
