@@ -1,6 +1,6 @@
 
 .home{
-   background-image: url("../assets/house-mobile.jpg");
+   background-image: url("../assets/house-mobile.webp");
    background-size: cover;
    background-position: center;
    background-repeat: no-repeat;
@@ -36,7 +36,7 @@
     }
 
     @media (orientation: landscape) {
-        background-image: url("../assets/house-desk.jpg");
+        background-image: url("../assets/house-desk.webp");
       }
       @media (min-width: 1000px) {
         background-size: contain;

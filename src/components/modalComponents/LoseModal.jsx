@@ -1,6 +1,7 @@
 import startNewGame from "../../functions/startNewGame";
 import { ThemeContext } from "../../pages/Game";
 import React, {  useContext } from "react";
+import { Link } from "react-router-dom";
 
 export default function LoseModal() {
   const { setModal,
@@ -29,6 +30,7 @@ export default function LoseModal() {
       >
         Start a new game
       </button>
+      <Link className="return" to={"/"}>Return to the main menu</Link>
     </div>
   );
 }

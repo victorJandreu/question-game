@@ -27,12 +27,11 @@ export default function Tablero({
     return (
       <div className="casilla" key={x.posicion} id={x.posicion}>
         {valor}
-        <p>{x.content}</p>
       </div>
     );
   });
+  //   <p>{x.content}</p> poner debajo de {valor} para comprobar las casillas
 
-  // <p>{x.content}</p> poner debajo de valor para comprobar las casillas
 
 
    // STYLES for the board
