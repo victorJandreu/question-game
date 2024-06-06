@@ -36,10 +36,10 @@ export default function Tablero({
 
    // STYLES for the board
    const styl = {
-    height: "70vh",
+    height: "60vh",
     display: "grid",
     gridTemplateColumns: `repeat(${maxColumnas}, 1fr)`,
-    gridTemplateRows: `repeat(${maxFilas}, calc(70vh / ${maxFilas}))`,
+    gridTemplateRows: `repeat(${maxFilas}, calc(60vh / ${maxFilas}))`,
   };
 
   return (
