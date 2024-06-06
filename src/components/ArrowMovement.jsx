@@ -89,6 +89,8 @@ export default function ArrowMovement() {
   }, [tablero, modal]);
 
   return (
+    <div className="info-text"> 
+    <p className="">You can use the keyboard or the arrow button</p>
     <div className="arrowMenu">
       <button
       aria-label="move to up"
@@ -164,6 +166,7 @@ export default function ArrowMovement() {
       >
         <FaArrowRight className="icon" />
       </button>
+    </div>
     </div>
   );
 }

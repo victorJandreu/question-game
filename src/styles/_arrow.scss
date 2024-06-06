@@ -1,12 +1,30 @@
+
+
+.info-text{
+gap: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+margin: 0;
+}
+
+.info-text p{
+  color: white;
+ padding: 10px;
+width: 90%;
+ max-width: 220px;
+ background-color: rgb(25, 21, 21);
+ margin: 0;
+
+}
+
 .arrowMenu{
-    
-    margin-top: 1.5vh;
+  
+    margin-top: 1vh;
     height: 20vh;
     display: grid;
     width: 200px;
     max-height: 200px;
-    margin-inline: auto;
-  
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 1fr);
   
