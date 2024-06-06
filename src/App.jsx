@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Routes} from "react-router-dom";
+import { BrowserRouter, Route, Routes, Navigate} from "react-router-dom";
 import "./styles/app.scss";
 import React from "react";
 import Game from "./pages/Game";
