@@ -2,7 +2,7 @@ import { v4 as uuidv4 } from "uuid";
 import { decode } from "html-entities";
 
 export default function apiCall(metodoEstado, errorMetodo) {
-  return fetch("https://opentdb.com/api.php?amount=10")
+  return fetch("https://opentdb.com/api.php?amount=50")
     .then((res) => {
       if (!res.ok) {
         throw new Error();
@@ -16,7 +16,7 @@ export default function apiCall(metodoEstado, errorMetodo) {
     })
     .catch(() => {
       setTimeout(() => {
-        fetch("https://opentdb.com/api.php?amount=10")
+        fetch("https://opentdb.com/api.php?amount=50")
           .then((res) => {
             if(!res.ok){
               throw new Error()

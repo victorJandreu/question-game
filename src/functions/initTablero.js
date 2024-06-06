@@ -1,5 +1,17 @@
-export default function initTablero(maxFilas, maxColumnas, contenido) {
-  const goshtNumber = Math.round(maxFilas + maxColumnas / 2) * 2;
+export default function initTablero(maxFilas, maxColumnas, contenido, dificulty) {
+
+
+  let goshtNumber
+
+  if(dificulty === "hard") {
+    goshtNumber = Math.round(maxFilas + maxColumnas / 2) + 4 ;
+  } else if(dificulty === "easy") {
+    goshtNumber = Math.round(maxFilas + maxColumnas / 2) -5;
+  } else{
+    goshtNumber = Math.round(maxFilas + maxColumnas) - 4;
+  }
+
+
 
   const arr = [];
 

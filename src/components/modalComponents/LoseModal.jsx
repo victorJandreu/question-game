@@ -1,5 +1,5 @@
 import startNewGame from "../../functions/startNewGame";
-import { ThemeContext } from "../../App";
+import { ThemeContext } from "../../pages/Game";
 import React, {  useContext } from "react";
 
 export default function LoseModal() {

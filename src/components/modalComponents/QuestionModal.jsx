@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useContext } from "react";
-import { ThemeContext } from "../../App";
+import { ThemeContext } from "../../pages/Game";
 
 
 export default function QuestionModal({

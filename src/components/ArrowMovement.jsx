@@ -11,7 +11,7 @@ import {
   arrowLeft,
 } from "../functions/arrow-movement";
 import { useEffect, useContext } from "react";
-import { ThemeContext } from "../App";
+import { ThemeContext } from "../pages/Game";
 
 export default function ArrowMovement() {
   const {
@@ -128,7 +128,6 @@ export default function ArrowMovement() {
       <button
         className="left"
         onClick={() =>
-          arrowLeft(
             arrowLeft(
               tablero,
               contenido,
@@ -139,7 +138,6 @@ export default function ArrowMovement() {
               modal,
               setFloor
             )
-          )
         }
       >
         <FaArrowLeft className="icon" />

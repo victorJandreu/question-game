@@ -1,5 +1,5 @@
 import heartImg from "../../assets/heart.svg"
-import { ThemeContext } from "../../App";
+import { ThemeContext } from "../../pages/Game";
 import React, {  useContext } from "react";
 
 export default function HeartModal() {

@@ -1,0 +1,53 @@
+
+.home{
+   background-image: url("../assets/house-mobile.jpg");
+   background-size: cover;
+   background-position: center;
+   background-repeat: no-repeat;
+   background-color: rgb(25, 21, 21);
+
+    min-height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    object-fit: cover;
+    gap: 2rem;
+
+    a{
+        display: block;
+        width: 200px;
+        padding: 1rem 0;
+        text-align: center;
+        border-radius: 4px;
+        text-decoration: none;
+        color: rgb(25, 21, 21);
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        transition: transform .3s ease-in-out;
+        &:hover{
+            transform: scale(1.1);
+        }
+
+    }
+
+    @media (orientation: landscape) {
+        background-image: url("../assets/house-desk.jpg");
+      }
+      @media (min-width: 1000px) {
+        background-size: contain;
+      }
+    }
+
+    .easy{
+        background-color: #26dd32;
+    }
+
+    .normal{
+        background-color: rgb(220, 205, 50);
+    }
+
+    .hard{
+        background-color: #e13535;
+    }

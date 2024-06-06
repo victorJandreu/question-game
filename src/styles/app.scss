@@ -2,6 +2,7 @@
 @use "board";
 @use "arrow";
 @use "heart-nav";
+@use "home";
 
 body {
     display: flex;
@@ -17,14 +18,18 @@ body {
   
   #root {
     width: 100vw;
-   background-image: url("../assets/exterior.jpg");
-   background-size: cover;
-   background-repeat: no-repeat;
-   min-height: 100vh;
    display: flex;
    flex-direction: column;
    align-items: center;
    justify-content: center;
+  }
+
+  .game{
+    background-image: url("../assets/exterior.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    width: 100vw;
   }
   
   p{
@@ -43,6 +48,12 @@ body {
   
   .nextButton:hover{
     opacity: .7;
+  }
+
+  .wait{
+    margin-inline: auto;
+   width: 90%;
+   max-width: 400px;
   }
   
 
