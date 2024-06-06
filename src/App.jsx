@@ -14,6 +14,7 @@ function App() {
     <Routes>
       <Route path="/question-game" element={<Home />} />
       <Route path="/question-game/:dificulty" element={<Game />} />
+      <Route path="*" element={<Navigate to="/question-game" />} />
     </Routes>
   </BrowserRouter>
   );
